@@ -7,3 +7,6 @@ def separar():
 
 def acoes_cao():
     print("1 - Latir\n2 - Correr\n3 - Sentar\n4 - Voltar")
+
+def acoes_humano():
+    print("1 - Falar\n2 - Pensar")

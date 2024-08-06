@@ -1,19 +1,19 @@
 class Animal:
-    nome = str
-    coracao = bool
+    nome = ''
+    coracao = ''
     def __init__(self, nome, coracao):
         self.nome = nome
         self.coracao = coracao
 
 class Humano(Animal):
-    nome = str
-    coracao = str
-    cor = str 
-    sexo = str 
-    idade = int
-    peso = int
-    salario = int 
-    cpf = int
+    nome = ''
+    coracao = ''
+    cor = '' 
+    sexo = '' 
+    idade = ''
+    peso = ''
+    salario = '' 
+    cpf = ''
 
     def __init__(self, nome, coracao, cor, sexo, idade, peso, salario, cpf):
         super().__init__(nome, coracao)
@@ -24,15 +24,21 @@ class Humano(Animal):
         self.salario = salario
         self.cpf = cpf
 
+    def falar(self):
+        print("Bla...Bla...Bla..Bla")
+
+    def pensar(self):
+        print("hmmm.....hmm......hmmm........ ")
+
 class Cachorro(Animal):
-    nome = str
-    coracao = str
-    cor = str
-    peso = int
-    sexo = str
-    idade = int
-    tamanho = int 
-    raca = str
+    nome = ''
+    coracao = ''
+    cor = ''
+    peso = ''
+    sexo = ''
+    idade = ''
+    tamanho = '' 
+    raca = ''
     
     def __init__(self, nome, coracao, cor, peso, sexo, idade, tamanho, raca):
         super().__init__(nome, coracao)

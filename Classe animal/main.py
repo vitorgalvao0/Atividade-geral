@@ -1,12 +1,8 @@
 from classe import *
 from views import *
 
-
-
 dados_humano = []
 dados_cao = []
-
-
 
 def criar_cao():
     nome = input("Diga o nome do seu cao: ")
@@ -20,7 +16,6 @@ def criar_cao():
     cao = Cachorro(nome,coracao,cor,peso,sexo,idade,tamanho,raca)
     dados_cao.append(cao)
     return cao
-
 
 def criar_humano():
     nome = input("Qual o nome da pessoa: ")
@@ -65,24 +60,51 @@ while True:
     if 1 == op:
         criar_humano()
 
-    elif op == 2: 
+    if op == 2: 
         p = int(input("Insira o numero [0] para acessar as info: "))
         info_humano(p)
+        
+        separar()
 
-    elif op == 3:
+        acoes_humano()
+        
+        op = int(input("Qual acao deseja que a pessoa realize: "))
+
+        if op == 1: 
+            humano = int(input("Qual humano deseja:"))
+            dados_humano[humano].falar()
+        
+        elif op == 2:
+            humano = int(input("Qual humano deseja:"))
+            dados_humano[humano].pensar()
+
+    if op == 3:
         criar_cao()
 
-    elif op == 4:
-        p = int(input("Insira o numero [0] para acessar as info: ")) 
+    if op == 4: 
+        p = int(input("Insira o numero [0] para acessar as info: "))
         info_cao(p) 
         
         separar()
         
+        acoes_cao()
+        
         op = input("Qual acao deseja que o cao realize: ")
 
         if op == 1:
-            pass
+            cao = int(input("Qual cao deseja:"))
+            dados_cao[cao].latir()
+            
+        if op == 2:
+            cao = int(input("Qual cao deseja:"))
+            dados_cao[cao].correr()
 
-    elif op == 5:
+        if op == 3:
+            cao = int(input("Qual cao deseja:"))
+            dados_cao[cao].sentar()
+
+        if op == 4:
+            break
+
+    if op == 5:
         break
-
