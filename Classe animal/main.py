@@ -50,6 +50,7 @@ def info_cao(cao):
     print(dados_cao[cao].tamanho)
     print(dados_cao[cao].raca)
 
+
 while True:
     separar()
     menu_principal()
